@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Webapp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="leftcontainer">
+          <img src="./img/posse.jpg" alt="posse" class="posse" />
+          <p class="first">1st week</p>
+        </div>
+        <button id="modal-open" class="kiroku">記録・投稿</button>
+      </div>
+    </header>
+    <div class="container">
+      <div class="left-container">
+        <div class="hour-container">
+          <div class="hourbox">
+            <div class="box">
+              <p class="top">Today</p>
+              <p class="number">0</p>
+              <p class="hour">hour</p>
+            </div>
+          </div>
+          <div class="hourbox">
+            <div class="box">
+              <p class="top">Month</p>
+              <p class="number">17</p>
+              <p class="hour">hour</p>
+            </div>
+          </div>
+          <div class="hourbox">
+            <div class="box">
+              <p class="top">Total</p>
+              <p class="number">19</p>
+              <p class="hour">hour</p>
+            </div>
+          </div>
+        </div>
+        <img src="./img/bougurahu.png" alt="" class="bougurahu" />
+      </div>
+      <div class="gragh1">
+        <img src="./img/enngurahu1.png" alt="" class="enngragh" />
+      </div>
+      <div class="gragh2">
+        <img src="./img/enngurahu2.png" alt="" class="enngragh" />
+      </div>
+    </div>
+    <div class="year-container">
+      <div class="year">2021年 7月</div>
+    </div>
+
+    <!-- ここからmodal -->
+
+    <div id="modal-overlay">
+      <div id="modal-content" class="modal-container">
+        <div class="modal-box">
+          <div class="left-modal">
+            <div class="study-day">
+              <label for="">学習日</label>
+              <div class="study-container">
+                <input type="text" class="study-box" />
+              </div>
+            </div>
+            <div class="study-content">
+              <h1>学習コンテンツ（複数選択可）</h1>
+              <div class="content-option">
+                <div class="content-options">
+                  <!-- <li>N予備校</li> -->
+                  <!-- <input type="checkbox" name=“” value="1" class="options">N予備校 -->
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">N予備校</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <!-- <li>ドットインストール</li> -->
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">ドットインストール</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <!-- <li>POSSE課題</li> -->
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">POSSE課題</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="study-language">
+              <h1>学習言語（複数選択可）</h1>
+              <div class="content-option">
+                <div class="content-options">
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">HTML</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">CSS</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">JavaScript</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">PHP</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">Laravel</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">SQL</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">SHELL</p>
+                  </button>
+                </div>
+                <div class="content-options">
+                  <button class="option-btn">
+                    <section class="check">
+                      <div></div>
+                    </section>
+                    <p class="options">情報システム基礎知識(その他)</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-modal">
+            <div class="study-time">
+              <label for="">学習時間</label>
+              <div class="study-container">
+                <input type="text" class="study-box" />
+              </div>
+            </div>
+            <div class="twitter-comment">
+              <label for="">Twitter用コメント</label>
+              <div class="twitter-container">
+                <input type="text" class="twitter-box" />
+              </div>
+            </div>
+            <div class="twitter-share">
+              <section class="bigcheck">
+                <div></div>
+              </section>
+              <li>Twitterにシェアする</li>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="modal-btn">記録・投稿</button>
+        </div>
+        <button id="modal-close" class="close-btn">×</button>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
