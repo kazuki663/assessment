@@ -32,17 +32,29 @@ $(function () {
   });
 });
 
-// ここから完了画面
+// ここから完了画面とloading画面
 
 $(function () {
   $("#finish-btn").click(function () {
-    $("#finish-overlay").fadeIn();
+    $("#loading-overlay").fadeIn();
     $("#modal-overlay").fadeOut();
+    setTimeout(
+      function() {
+        $("#loading-overlay").fadeOut();
+      }, 3000
+    );
+      setTimeout(
+        function() {
+          $("#finish-overlay").fadeIn();
+        }, 3000
+      );
+      // $('loading').addClass('active');
   });
+  });
+
   $("#finish-close").click(function () {
     $("#finish-overlay").fadeOut();
   });
-});
 
 
 // let trigger = document.getElementsByClassName("option-btn");
@@ -101,3 +113,10 @@ bigcheck.addEventListener('click', function () {
   }
 );
 
+
+// ここから画像回転
+
+// function func1() {
+//   var loading = document.getElementById("loading-img");
+//   loading.classList.add('active');
+// };
