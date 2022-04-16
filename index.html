@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Webapp</title>
   </head>
   <body>
@@ -43,18 +44,29 @@
             </div>
           </div>
         </div>
-        <img src="./img/bougurahu.png" alt="" class="bougurahu" />
+        <div class="column">
+
+          <div id="column" ></div>
+          <div id="column-2"></div>
+        </div>
       </div>
-      <div class="gragh1">
-        <img src="./img/enngurahu1.png" alt="" class="enngragh" />
-      </div>
-      <div class="gragh2">
-        <img src="./img/enngurahu2.png" alt="" class="enngragh" />
+      <div class="right-container">
+        
+        <div class="pie">
+          <div id="pie-1"></div>
+          <div id="pie-3"></div>
+  
+        </div>
+        <div class="pie">
+          <div id="pie-2"></div>
+          <div id="pie-4"></div>
+        </div>
       </div>
     </div>
     <div class="year-container">
       <div class="year">2021年 7月</div>
     </div>
+    <div class="yohaku"></div>
 
 
 
@@ -67,127 +79,129 @@
             <div class="study-day">
               <label for="">学習日</label>
               <div class="study-container">
-                <input type="text" class="study-box" />
+                <input type="text" class="study-box" id="study-box" />
               </div>
             </div>
             <div class="study-content">
               <h1>学習コンテンツ（複数選択可）</h1>
               <div class="content-option">
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">N予備校</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="nyobi"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">N予備校</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="nyobi"  />
-<label for="nyobi">N予備校</label>
+
+                    <label for="nyobi">N予備校</label>
+
                 </div>
+                <!-- <li>ドットインストール</li> -->
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">ドットインストール</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="dotinstall"  />
                 <div class="content-options">
-                  <!-- <li>ドットインストール</li> -->
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">ドットインストール</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="dotinstall"  />
 <label for="dotinstall">ドットインストール</label>
                 </div>
+                <!-- <li>POSSE課題</li> -->
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">POSSE課題</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="POSSEkadai"  />
                 <div class="content-options">
-                  <!-- <li>POSSE課題</li> -->
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">POSSE課題</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="POSSEkadai"  />
-<label for="POSSEkadai">POSSE課題</label>
+                <label for="POSSEkadai">POSSE課題</label>
                 </div>
               </div>
             </div>
             <div class="study-language">
               <h1>学習言語（複数選択可）</h1>
               <div class="content-option">
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">HTML</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="html"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">HTML</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="html"  />
 <label for="html">HTML</label>
                 </div>
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">CSS</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="css"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">CSS</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="css"  />
 <label for="css">CSS</label>
                 </div>
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">JavaScript</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="javascript"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">JavaScript</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="javascript"  />
 <label for="javascript">JavaScript</label>
                 </div>
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">PHP</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="php"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">PHP</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="php"  />
 <label for="php">PHP</label>
                 </div>
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">Laravel</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="laravel"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">Laravel</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="laravel"  />
 <label for="laravel">Laravel</label>
                 </div>
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">SQL</p>
+                </button> -->
+                <input class="visually-hidden" type="checkbox" name="fruits" id="sql"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">SQL</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="sql"  />
 <label for="sql">SQL</label>
                 </div>
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">SHELL</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="shell"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">SHELL</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="shell"  />
 <label for="shell">SHELL</label>
                 </div>
+                <!-- <button class="option-btn">
+                  <section class="check">
+                    <div></div>
+                  </section>
+                  <p class="options">情報システム基礎知識(その他)</p>
+                </button> -->
+                <input  class="visually-hidden" type="checkbox" name="fruits" id="jyoho"  />
                 <div class="content-options">
-                  <!-- <button class="option-btn">
-                    <section class="check">
-                      <div></div>
-                    </section>
-                    <p class="options">情報システム基礎知識(その他)</p>
-                  </button> -->
-                  <input  class="visually-hidden" type="checkbox" name="fruits" id="jyoho"  />
 <label for="jyoho">情報システム基礎知識(その他)</label>
                 </div>
               </div>
@@ -224,7 +238,7 @@
     <!-- ここからloading画面 -->
     <div id="loading-overlay">
       <div id="loading-page">
-        <img src="./img/loading-img.png" alt="" class="loading-img , active" id="loading">
+        <img src="./img/loading-img.png" alt="" class="loading-img , active-img" id="loading">
       </div>
     </div>
 
@@ -247,8 +261,12 @@
     </div>
 
 
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./index.js"></script>
   </body>
