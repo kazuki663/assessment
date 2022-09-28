@@ -1,0 +1,16 @@
+DROP SCHEMA IF EXISTS webapp;
+CREATE SCHEMA webapp;
+USE webapp;
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users
+(
+  id         INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  name       VARCHAR(10)  NOT NULL,
+  email      VARCHAR(255) NOT NULL,
+  password   VARCHAR(255) NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  deleted_at DATETIME
+);
+INSERT INTO users SET name='かずき', email='test1@webapp.com', password= '$2y$10$ozxkhAEW8yeC2hvru.8zj.YDnu8Wmmvr6ACSi8kheGyCyzsWP81Zm';
